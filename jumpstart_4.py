@@ -4,7 +4,7 @@ import time
 
 
 def header():
-    print('> Welcome to your LOG journal <\n')
+    print("> Welcome to your LOG journal <\n")
 
 
 def event_loop(journal):
