@@ -30,15 +30,10 @@ def forecast(html):
     
        
 def main():
-    # print header
     print_the_header()
-    # get zipcode
     zip_code = input("What zipcode do you want the weather for?")
-    # get html
     html = get_html(zip_code)
-    # parse html
     report = forecast(html)
-    # display forecast
     print(f"{report.loc}:\n{report.cond} / {report.tmp} {report.scl}")
 
 
