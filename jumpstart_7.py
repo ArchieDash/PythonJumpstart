@@ -1,4 +1,4 @@
-from actors import Wizard, Creature
+import actors
 import random
 import time
 
@@ -17,14 +17,14 @@ def print_header():
 def game_loop():
 
     creatures = [
-        Creature("Toad", 1),
-        Creature("Tiger", 12),
-        Creature("Bat", 3),
-        Creature("Dragon", 50),
-        Creature("Evil Wizard", 1000)
+        actors.SmallAnimal("Toad", 1),
+        actors.Creature("Tiger", 12),
+        actors.SmallAnimal("Bat", 3),
+        actors.Dragon("Dragon", 50, 75, True),
+        actors.Wizard("Evil Wizard", 1000)
     ]
 
-    hero = Wizard("Gandolf", 75)
+    hero = actors.Wizard("Gandolf", 75)
 
     while True:
 
@@ -50,6 +50,10 @@ def game_loop():
 
         else:
             print("Goodbye!")
+            break
+
+        if not creatures:
+            print("You've defeated all the creatures. Well done!")
             break
 
         print()
