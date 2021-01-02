@@ -8,10 +8,8 @@ Location = collections.namedtuple("Location", "city state country")
 def main():
     print(pyfiglet.figlet_format("Weather App"))
     location_text = input("Where do you want the weather report (e.g. Portland, US)? ")
-    location = convert_plain_text(location_text)
-    city, state, country = location
+    city, state, country = convert_plain_text(location_text)
     
-
 
 def convert_plain_text(location_text):
     if not location_text or not location_text.strip():
@@ -33,7 +31,6 @@ def convert_plain_text(location_text):
     else:
         return None
     return Location(city, state, country)
-
 
 
 if __name__ == "__main__":
